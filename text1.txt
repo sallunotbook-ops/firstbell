@@ -1,0 +1,10 @@
+Welcome to My App
+-----------------
+This is a simple text file hosted on GitHub Pages.
+
+You can load this text inside your Android app using:
+- OkHttp
+- Retrofit
+- URLConnection
+
+Thank you!
