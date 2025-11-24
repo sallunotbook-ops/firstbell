@@ -1,0 +1,12 @@
+Chapter 1: Introduction
+-----------------------
+This is the first chapter of your content.
+You can write any long text here.
+
+Chapter 2: Details
+------------------
+Add your second chapter content in this section.
+
+Chapter 3: Summary
+------------------
+This section includes the summary of your topic.
