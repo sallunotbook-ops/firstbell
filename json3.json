@@ -1,0 +1,21 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "title": "Chapter 1",
+      "content": [
+        "Paragraph 1 text goes here.",
+        "Paragraph 2 goes here.",
+        "Paragraph 3 goes here."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Chapter 2",
+      "content": [
+        "This is chapter 2 first paragraph.",
+        "More details in second paragraph."
+      ]
+    }
+  ]
+}
