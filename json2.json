@@ -1,0 +1,20 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Mathematics",
+      "items": [
+        { "id": 101, "title": "Decimals" },
+        { "id": 102, "title": "Fractions" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Science",
+      "items": [
+        { "id": 201, "title": "Water" },
+        { "id": 202, "title": "Plants" }
+      ]
+    }
+  ]
+}
