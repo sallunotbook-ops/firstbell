@@ -2,11 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index.html</title>
+    <title>Game Menu</title>
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0a0f24, #1b1f3b);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .menu-container {
+            width: 90%;
+            max-width: 360px;
+            text-align: center;
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        .menu-btn {
+            width: 100%;
+            padding: 15px;
+            margin: 12px 0;
+            background: #272b4d;
+            color: white;
+            border: none;
+            font-size: 18px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: 0.25s;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .menu-btn .material-icons {
+            font-size: 26px;
+        }
+
+        .menu-btn:hover {
+            background: #3b4273;
+            transform: scale(1.05);
+        }
+
+        .menu-btn:active {
+            transform: scale(0.97);
+        }
+
+        /* Different colorful borders for each button */
+        .start { border-left: 6px solid #4CAF50; }
+        .options { border-left: 6px solid #FFC107; }
+        .scores { border-left: 6px solid #03A9F4; }
+        .help { border-left: 6px solid #9C27B0; }
+        .exit { border-left: 6px solid #F44336; }
+    </style>
 </head>
 <body>
-    <p>This ia my first page.</p>
+
+    <div class="menu-container">
+        <h1>Game Menu</h1>
+
+        <a href="start.html">
+            <button class="menu-btn start">
+                <span class="material-icons">sports_esports</span>
+                Game Start
+            </button>
+        </a>
+
+        <a href="options.html">
+            <button class="menu-btn options">
+                <span class="material-icons">settings</span>
+                Options
+            </button>
+        </a>
+
+        <a href="scores.html">
+            <button class="menu-btn scores">
+                <span class="material-icons">emoji_events</span>
+                High Scores
+            </button>
+        </a>
+
+        <a href="help.html">
+            <button class="menu-btn help">
+                <span class="material-icons">help_outline</span>
+                Help
+            </button>
+        </a>
+
+        <a href="exit.html">
+            <button class="menu-btn exit">
+                <span class="material-icons">exit_to_app</span>
+                Exit
+            </button>
+        </a>
+    </div>
+
 </body>
 </html>
