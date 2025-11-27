@@ -1,3 +1,17 @@
 {
-  "title": "Welcome! JSON Loaded Successfully"
+  "header": "GitHub Data Loaded!",
+  "list": [
+    {
+      "title": "First item",
+      "message": "This is first data"
+    },
+    {
+      "title": "Second item",
+      "message": "This is second data"
+    },
+    {
+      "title": "Third item",
+      "message": "This is third data"
+    }
+  ]
 }
