@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "name": "Game 1",
+      "link": "https://example.com/g1",
+      "op": "15"
+    },
+    {
+      "name": "Game 2",
+      "link": "https://example.com/g2",
+      "op": "20"
+    }
+  ]
+}
