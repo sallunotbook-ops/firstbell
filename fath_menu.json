@@ -1,12 +1,12 @@
 [
   {
     "name": "സത്യവിശ്വാസം",
-    "link": "https://example.com/a1",
+    "link": "text1.txt",
     "op": "1"
   },
   {
     "name": "വിജ്ഞാനം",
-    "link": "https://example.com/a2",
+    "link": "text2.txt",
     "op": "1"
   }
 ]
