@@ -1,14 +1,12 @@
-{
-  "items": [
-    {
-      "name": "Game 1",
-      "link": "https://example.com/g1",
-      "op": "15"
-    },
-    {
-      "name": "Game 2",
-      "link": "https://example.com/g2",
-      "op": "20"
-    }
-  ]
-}
+[
+  {
+    "name": "സത്യവിശ്വാസം",
+    "link": "https://example.com/a1",
+    "op": "1"
+  },
+  {
+    "name": "വിജ്ഞാനം",
+    "link": "https://example.com/a2",
+    "op": "1"
+  }
+]
