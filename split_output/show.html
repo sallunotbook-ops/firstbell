@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Text Viewer</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: linear-gradient(135deg, #1e293b, #0f172a);
+        color: #e5e7eb;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    header {
+        padding: 12px 20px;
+        background: rgba(255,255,255,0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        backdrop-filter: blur(6px);
+    }
+
+    header span {
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+    .buttons button {
+        background: #3b82f6;
+        border: none;
+        color: white;
+        padding: 8px 14px;
+        margin-left: 8px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: transform 0.2s, background 0.2s;
+    }
+
+    .buttons button:hover {
+        background: #2563eb;
+        transform: translateY(-1px);
+    }
+
+    .buttons button:disabled {
+        background: #475569;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    main {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+        animation: fadeIn 0.3s ease;
+    }
+
+    /* THIS IS THE MOST IMPORTANT PART */
+    pre {
+        white-space: pre-wrap;   /* preserve spaces + new lines */
+        tab-size: 4;             /* keep tabs readable */
+        font-family: "Noto Sans Malayalam", system-ui, monospace;
+        line-height: 1.7;
+        font-size: 15px;
+        margin: 0;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(4px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+        padding: 8px;
+        text-align: center;
+        font-size: 12px;
+        opacity: 0.6;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <span id="title">File: 0.txt</span>
+    <div class="buttons">
+        <button onclick="prevFile()">◀ Previous</button>
+        <button onclick="nextFile()">Next ▶</button>
+    </div>
+</header>
+
+<main>
+    <pre id="content">Loading...</pre>
+</main>
+
+<footer>
+    Text Viewer • Exact TXT Rendering
+</footer>
+
+<script>
+let currentIndex = 0;
+
+function loadFile(index) {
+    fetch(index + ".txt")
+        .then(res => {
+            if (!res.ok) throw new Error("Not found");
+            return res.text();
+        })
+        .then(text => {
+            document.getElementById("content").textContent = text;
+            document.getElementById("title").textContent = "File: " + index + ".txt";
+            currentIndex = index;
+        })
+        .catch(() => {
+            document.getElementById("content").textContent =
+                "File not found: " + index + ".txt";
+        });
+}
+
+function nextFile() {
+    loadFile(currentIndex + 1);
+}
+
+function prevFile() {
+    if (currentIndex > 0) {
+        loadFile(currentIndex - 1);
+    }
+}
+
+// Initial load
+loadFile(0);
+</script>
+
+</body>
+</html>
+
