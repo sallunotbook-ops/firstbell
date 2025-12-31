@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <title>TXT File Viewer</title>
+    <style>
+        body {
+            font-family: system-ui, Noto Sans Malayalam, sans-serif;
+            line-height: 1.7;
+            padding: 20px;
+            background: #fafafa;
+        }
+        #content {
+            white-space: pre-wrap; /* preserve formatting */
+        }
+    </style>
+</head>
+<body>
+
+<h2>Text File Content</h2>
+<div id="content">Loading...</div>
+
+<script>
+fetch("16.txt")
+    .then(response => response.text())
+    .then(text => {
+        document.getElementById("content").textContent = text;
+    })
+    .catch(err => {
+        document.getElementById("content").textContent = "Error loading file";
+    });
+</script>
+
+</body>
+</html>
